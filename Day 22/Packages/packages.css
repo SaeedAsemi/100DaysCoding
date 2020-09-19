@@ -85,13 +85,10 @@ main {
     /* border-radius: 8px; */
     color: #fff;
     padding: 0.5rem;
-
-    transition-delay: 0.5s;
     transform: rotateZ(45deg) translate(3.5rem , -0.8rem);
     transform-origin: center;
     width: 12rem;
     text-align: center;
-    transition: rotateZ 0.5s;
 }
 
 #free {
