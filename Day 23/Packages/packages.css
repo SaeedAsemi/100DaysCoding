@@ -1,0 +1,146 @@
+@font-face {
+    font-family: "Exo 2";
+    src: url("exo2-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Exo 2";
+    src: url("exo2-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+
+main {
+    padding-top: 2rem;
+}
+
+.background {
+    background: url(../images/plans-background.jpg) center/cover;
+    filter: contrast(70%);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.package {
+    width: 80%;
+    margin: 1.25rem 0;
+    border: 4px solid #025502;
+    border-left: none;
+    padding: 0.6rem;
+    position: relative;
+    min-width: 12rem;
+    overflow: hidden;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.package:hover,
+.package:active {
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    /*border-color: #ff5454 !important;*/
+    border-color: #ff5454;
+}
+
+.package a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 2rem;
+}
+
+.package-subtitle {
+    color: #aaa;
+    padding: 1.2rem 0;
+}
+
+.package-info {
+    padding: 1.2rem;
+    margin-top: 15px;
+    border: 1px solid #025502;
+    background-color: #fff;
+    min-width: 8rem;
+    /* font-family: "Exo 2", sans-serif; */
+    /* font-weight: 600; */
+    /* font-size: 1.1rem; */
+
+    font: 600 1.1rem "Exo 2", sans-serif;
+    /*font-style font-variant font-weight font-size/line-height font-family*/
+}
+
+#plus {
+    background-color: rgba(213, 255, 220, 0.95);
+}
+
+.package-badge {
+    font-size: 0.8rem;
+    position: absolute;
+    margin: 0;
+    right: 0;
+    top: 0;
+    background-color: #ff5454;
+    /* border-radius: 8px; */
+    color: #fff;
+    width: 11rem;
+    padding: 0.5rem;
+    text-align: center;
+    transform: rotateZ(45deg) translate(3.3rem, -0.5rem);
+    transform-origin: center;
+
+}
+
+
+#free {
+    background-color: rgba(234, 252, 237, 0.95);
+    float: right;
+    border-left: 4px solid #025502;
+    border-right: none;
+}
+
+#free:hover,
+#free:active {
+    border-left-color: #ff5454;
+}
+
+#premium {
+    background-color: rgba(14, 79, 31, 0.95);
+}
+
+#premium .package-title {
+    color: #fff;
+}
+
+#premium .package-subtitle {
+    color: #bbb;
+}
+
+@media (min-width:40rem) {
+    main {
+        margin: 0 auto;
+        max-width: 1500px;
+    }
+
+}
+
+@media (min-width:1500px) {
+    .package {
+        border-left: 4px solid #025502;
+    }
+
+    .package:hover,
+    .package:active {
+        border-color: #ff5454;
+    }
+
+    #free {
+        border-right: 4px solid #025502;
+    }
+
+    #free:hover,
+    #free:active {
+        border-right-color: #ff5454;
+    }
+}
