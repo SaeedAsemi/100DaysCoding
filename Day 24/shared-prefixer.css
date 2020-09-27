@@ -1,0 +1,381 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 5 version
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+:root {
+  --dark-green: ;
+  --highlighted-red: #dc143c;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 3.5rem auto fit-content(8.3rem);
+  grid-template-rows: 3.5rem auto fit-content(8.3rem);
+
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  /* padding-top: 3.5rem; */
+}
+
+main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  /* min-height: calc(100vh - 4rem - 8.3rem); */
+  /* margin-top: 3rem; */
+  /* grid-row: 2 / 3; */
+  grid-area: main;
+}
+
+.backdrop {
+  background-color: hsla(0, 0%, 0%, 0.425);
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/*------------------ Header ------------------*/
+
+.main-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  background-color: #04a111;
+  padding: 0.5rem 1.2rem;
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.toggle-button {
+  width: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.15rem;
+  background: black;
+  display: block;
+  margin: 0.4rem 0;
+}
+
+.main-header-brand {
+  color: #014e01;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 120%;
+  margin-left: 10px;
+}
+
+.main-header-brand img {
+  height: 2.5rem;
+  vertical-align: middle;
+  -webkit-animation: brandAnime 500ms 3s 3;
+  animation: brandAnime 500ms 3s 3;
+}
+
+/*---- Nav ----*/
+
+.main-nav {
+  display: none;
+}
+
+.main-nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-nav-items {
+  list-style: none;
+  padding: 0 1.2rem;
+}
+
+.main-nav-items a,
+.mobile-nav__item a {
+  color: #014e01;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.main-nav-items a:hover,
+.main-nav-items a:active {
+  color: white;
+  border-bottom: 3px solid white;
+  padding-bottom: 0.1rem;
+}
+
+.main-nav-items_cta {
+  -webkit-animation: ctaAnime 500ms 2s 3 forwards;
+  animation: ctaAnime 500ms 2s 3 forwards;
+}
+
+.main-nav-items_cta a,
+.mobile-nav__item--cta a {
+  color: #fff;
+  background-color: var(--highlighted-red);
+  border-radius: 7px;
+  padding: 0.5rem 0.6rem;
+}
+
+.main-nav-items_cta a:hover,
+.main-nav-items_cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
+  color: var(--highlighted-red);
+  background-color: #fff;
+}
+
+/*---- Mobile Nav ----*/
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 80%;
+  height: 100vh;
+}
+
+.mobile-nav__items {
+  width: 80%;
+  height: 100%;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.mobile-nav__item {
+  margin: 0.7rem 0;
+}
+
+.mobile-nav__item a {
+  font-size: 1.3rem;
+}
+
+/*------------------ Button ------------------*/
+
+.button {
+  background-color: #025502;
+  color: #fff;
+  padding: 0.5rem 0.7rem;
+  border-radius: 15px;
+  margin-top: 1rem;
+  font: inherit;
+  font-size: 1rem;
+  border: 1px solid #025502;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.button:hover,
+.button:active {
+  background-color: #fff;
+  color: #025502;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:disabled {
+  background: #ccc;
+  border-color: #868686;
+  color: #868686;
+  cursor: not-allowed;
+}
+
+/*------------------ Main Footer ------------------*/
+
+.main-footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  background-color: #181515;
+  padding: 2rem;
+  color: #fff;
+  margin-top: 3.1rem;
+  /* grid-row: 3 / 4; */
+  grid-area: footer;
+}
+
+.main-footer-links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.main-footer-link {
+  margin: 0.5rem 0;
+}
+
+.main-footer-link a:link,
+.main-footer-link a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-footer-link a:hover,
+.main-footer-link a:active {
+  text-decoration: none;
+  color: #acacac;
+}
+
+.open {
+  display: block !important;
+  opacity: 1 !important;
+  -webkit-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  transform: translateY(0) !important;
+}
+
+@media (min-width: 40rem) {
+  .main-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+
+  .main-footer-links {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .main-footer-link {
+    margin: 0 1rem;
+  }
+}
+
+@-webkit-keyframes ctaAnime {
+  for {
+    -webkit-transform: scaleY(1) rotateX(0);
+    transform: scaleY(1) rotateX(0);
+  }
+
+  to {
+    -webkit-transform: scaleY(-1) rotateX(180deg);
+    transform: scaleY(-1) rotateX(180deg);
+  }
+}
+
+@keyframes ctaAnime {
+  for {
+    -webkit-transform: scaleY(1) rotateX(0);
+    transform: scaleY(1) rotateX(0);
+  }
+
+  to {
+    -webkit-transform: scaleY(-1) rotateX(180deg);
+    transform: scaleY(-1) rotateX(180deg);
+  }
+}
+
+@-webkit-keyframes brandAnime {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+
+  50% {
+    -webkit-transform: rotateZ(35deg);
+    transform: rotateZ(35deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+}
+
+@keyframes brandAnime {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+
+  50% {
+    -webkit-transform: rotateZ(35deg);
+    transform: rotateZ(35deg);
+  }
+
+  100% {
+    -webkit-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+}
