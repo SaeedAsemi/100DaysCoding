@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Tech Tarfand
+    body
+        p.maintitle.
+            this is my first pugjs learning
+            this is a new line
+        div.base
+            ul
+                li
+                    a.mylink(href='http://www.google.com') Google
+            input.search(type="password" name="find" data-js=`${ 2>1 ? "Ok" : "Not-Ok"}`)
+        #my-main
+
+        - const myMainClasses = ["class 1" , "class2" , "class3"]
+        div.classMain(class=myMainClasses)
+
+
+        - const myMainStyles = {"background-color" : "aqua"  , "height" : "150px" , "margin" : "20px"}
+        div(style= myMainStyles)
+        
+        - const myAttributes = { "srs" : "example.png" , "alt" : "my example photo"}
+        img&attributes(myAttributes)
+
+        input(type="text" disabled)

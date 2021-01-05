@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Tech Tarfand
+    body
+        h1 For/Each Loop
+        each bDate , i in [1995,1996,1997,1998,1999,2000]
+            p= bDate + " - " + i
+        br
+        - const age = {"Saeed" : 23  ,"Mahdi" : 24 ,"Donald" : 100};
+        each a , i in age
+            p= i + " : " + a
+
+        br
+        for n in []
+            p= n
+        else
+            strong Noting to show here !!
+
+
+

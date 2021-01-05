@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        //myOrderStatus should be ==> pending || sending || receive || random =>(mean's default)
+
+        - const myOrderStatus = 'random'
+
+        case myOrderStatus
+            when 'pending'
+                p Your order will be sent shortly.
+            when 'sending'
+                p Your order is sending.
+            when 'receive'
+                p Your order has been received.
+            default 
+                p Sorry we have some problems ..!

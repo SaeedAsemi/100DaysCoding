@@ -1,0 +1,57 @@
+mixin comment(commentData)
+    .comment
+        if commentData.postedByAdmin
+            em Admin
+        .date= commentData.date
+        .name= commentData.name
+        .text= commentData.text
+
+doctype html
+
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Tech Tarfand
+
+        style.
+            .comment{
+                font-size: 1.2rem;
+                font-family: sans-serif;
+                padding: 15px;
+                line-height:1.5;
+                border: 1px solid gray;
+                width: 235px; 
+                margin: 1rem;
+            }
+
+            .date{font-size:75%}
+
+            .name{
+                font-size:85%;
+                font-weight:bold;
+                margin:0 0 0.8rem 0;
+            }
+
+            .text{font-size:90%;}
+
+            em {
+                display:block;
+                font-size:0.7rem;
+                text-align:right;
+            }
+
+    body
+        //.comment
+            .date 15-01-2021
+            .name Jack
+            .text Hello , Thanks for this tutorial .
+
+        - const cm1 = {date:'15-01-2021' , name:'Jack' , text:'Hello , Thanks for this tutorial .'}
+        +comment(cm1)
+
+        - const cm2 = {postedByAdmin:true , date:'15-06-2020' , name:'Anna' , text:'Hello, So thanks for this help .'}
+        +comment(cm2)
+
+        - const cm3 = {date:'26-11-2020' , name:'Hanah' , text:'Hey Saeed , Thanks for your practise .'}
+        +comment(cm3)

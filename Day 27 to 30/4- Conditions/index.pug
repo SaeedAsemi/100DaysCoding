@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Tech Tarfand
+    body
+        h2 Conditions test ...
+
+        - let user = {name: "Saeed" , loggedIn : false , lastLogin : 8 }
+
+        if user.loggedIn
+            p
+                | Welcome back to our website 
+                strong #{user.name}
+
+        else if user.lastLogin < 10 
+            p 
+                | Your last login was #{user.lastLogin} minute ago. 
+                br
+                a(href="/#") Log In again
+
+        else
+            a(href="/#") Log In
