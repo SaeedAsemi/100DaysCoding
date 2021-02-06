@@ -1,0 +1,98 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="../css/dist/setting.css")
+        title Shopify
+    body
+        main.sidebar-toggled
+            aside
+                .sidebar.toggled
+                    span#sidebar-toggle
+                        ion-icon(name="arrow-back-circle-outline")
+                    .main-nav-logo
+                        a(href="#")
+                            img(src="../img/rubix.png" alt="Rubix - My test programming" class="main-nav-logo__img")
+                            span.main-nav-logo__link RUBIX
+
+                    ul.main-side
+                        li.main-side__list
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="stats-chart-outline")
+                                span Overview
+                        li.main-side__list
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="analytics-outline")
+                                span Breakdown
+                        li.main-side__list
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="copy-outline")
+                                span Comparison
+                        li.main-side__list
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="link-outline")
+                                span UTMs
+                        li.main-side__list
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="person-circle-outline")
+                                span Account
+                        li.main-side__list
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="settings-outline")
+                                span Desk Settings
+            .main
+                .main-data
+                    .connect-section
+                        img(src="../img/shopify.png" alt="shopify alexa")
+                        h3 Hi, Alexa
+                        p First, grant Rubix access to your Shopify store.
+                        a(href="#" class="main-btn") Get Staerted
+
+                section(class="general-section")
+                    h1 General
+                    p Set up the basic information for your store.
+                    .main-data
+                        .general-section__store
+                            label(for="store-name" class="lbl-store") Store name
+                            input(type="text" class="input-section")
+                            label(for="time-zone" class="lbl-zone") Time zone
+                            select(name="time" class="input-section")
+                                option(value="Alaska") America/Alaska
+                                option(value="California") America/California
+                                option(value="Michigan") America/Michigan
+                                option(value="New York") America/New York
+                                option(value="New Mexico") America/New Mexico
+                                option(value="Texas") America/Texas
+                                option(value="Virginia") America/Virginia
+                                option(value="Washington") America/Washington
+                section(class="integ-section")
+                    h1 Integrations
+                    p Link your ecommerce platforms and any essential apps:
+                    .main-data
+                        .connect-section
+                            img(src="../img/shopify.png" alt="shopify")
+                            h3 Shopify
+                            p.
+                                Rubix pulls order, customer, product, cart, and abandoned
+                                cart information from Shopify hourly.
+                            a(href="#" class="main-btn__disc") Disconnect
+                        .connect-section
+                            img(src="../img/facebook.png" alt="shopify facebook")
+                            h3 Facebook Ads
+                            p Rubix pulls advertising spend from Facebook hourly.
+                            a(href="#" class="main-btn") Get Staerted
+                        .connect-section
+                            img(src="../img/google-ads.png" alt="Google Ads")
+                            h3 Google Ads
+                            p Rubix pulls advertising spend from Google Ads hourly.
+                            a(href="#" class="main-btn") Get Staerted
+                        .connect-section
+                            img(src="../img/Google-Analytics.webp" alt="Google Analytics")
+                            h3 Google Analytics
+                            p.
+                                Rubix pulls visit, medium, source, campaign and transaction
+                                details from Google Analytics hourly.
+                            a(href="#" class="main-btn") Get Staerted
+        script(src="../js/script.js")
+        script(src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js")
