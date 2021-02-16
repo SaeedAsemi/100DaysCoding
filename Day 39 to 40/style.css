@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.title {
+  margin: 1rem;
+}
+
+.makeGrid {
+  display: block;
+  margin: 1rem auto 0 auto;
+  background-color: darkorange;
+  border-color: black;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 5px;
+  display: block;
+  margin-top: 2rem;
+  background-color: black;
+}
+
+.main {
+  grid-area: main;
+  display: grid;
+  gap: 5px;
+  overflow: hidden;
+}
+
+.main :nth-child(odd) {
+  background-color: black;
+}
+
+.main :nth-child(even) {
+  background-color: whitesmoke;
+}
