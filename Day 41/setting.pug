@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="../css/dist/setting.css")
+        title Shopify
+    body
+        main.sidebar-toggled
+            aside
+                .sidebar.toggled
+                    span#sidebar-toggle
+                        ion-icon(name="arrow-back-circle-outline")
+                    .main-nav-logo
+                        a(href="#")
+                            img(src="../img/rubix.png" alt="Rubix - My test programming" class="main-nav-logo__img")
+                            span.main-nav-logo__link RUBIX
+
+                    ul.main-side
+                        li.main-side__list.list1
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="stats-chart-outline")
+                                span Overview
+                        li.main-side__list.list2
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="analytics-outline")
+                                span Breakdown
+                        li.main-side__list.list3
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="copy-outline")
+                                span Comparison
+                        li.main-side__list.list4
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="link-outline")
+                                span UTMs
+                        li.main-side__list.list5
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="person-circle-outline")
+                                span Account
+                        li.main-side__list.list6
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="settings-outline")
+                                span Desk Settings
+            .main
+                //- content will added by javascript here
+        script(type="module" src="../js/switchPages.js")
+        script(src="../js/toggleSide.js") 
+        script(src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js")
