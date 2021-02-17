@@ -11,33 +11,33 @@ html(lang="en")
                 .sidebar.toggled
                     span#sidebar-toggle
                         ion-icon(name="arrow-back-circle-outline")
-                    .main-nav-logo.change-page
+                    #homePage.main-nav-logo.change-page
                         a(href="#")
                             img(src="../img/rubix.png" alt="Rubix - My test programming" class="main-nav-logo__img")
                             span.main-nav-logo__link RUBIX
 
                     ul.main-side
-                        li.main-side__list.change-page
+                        li#homePage.main-side__list.change-page
+                            a(href="#")
+                                ion-icon(class="main-side__img" name="home-outline")
+                                span Home
+                        li#overviewPage.main-side__list.change-page
                             a(href="#")
                                 ion-icon(class="main-side__img" name="stats-chart-outline")
                                 span Overview
-                        li.main-side__list.change-page
+                        li#breakdownPage.main-side__list.change-page
                             a(href="#")
                                 ion-icon(class="main-side__img" name="analytics-outline")
                                 span Breakdown
-                        li.main-side__list.change-page
+                        li#comparisonPage.main-side__list.change-page
                             a(href="#")
                                 ion-icon(class="main-side__img" name="copy-outline")
                                 span Comparison
-                        li.main-side__list.change-page
-                            a(href="#")
-                                ion-icon(class="main-side__img" name="link-outline")
-                                span UTMs
-                        li.main-side__list.change-page
+                        li#accountPage.main-side__list.change-page
                             a(href="#")
                                 ion-icon(class="main-side__img" name="person-circle-outline")
                                 span Account
-                        li.main-side__list.change-page
+                        li#settingPage.main-side__list.change-page
                             a(href="#")
                                 ion-icon(class="main-side__img" name="settings-outline")
                                 span Desk Settings

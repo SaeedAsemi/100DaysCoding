@@ -1,21 +1,38 @@
-import { ls0, ls1, ls2, ls3, ls4, ls5, ls6 } from "./pages.js";
-let main = document.querySelector(".main");
-const changePage = document.querySelectorAll(".change-page");
+import {
+  accountPage,
+  settingPage,
+  comparisonPage,
+  breakdownPage,
+  homePage,
+  notfoundPage,
+  overviewPage,
+} from "./pages.js";
 
 const pages = {
-  0: ls0,
-  1: ls1,
-  2: ls2,
-  3: ls3,
-  4: ls4,
-  5: ls5,
-  6: ls6,
+  accountPage,
+  overviewPage,
+  settingPage,
+  comparisonPage,
+  breakdownPage,
+  homePage,
+  notfoundPage,
 };
 
-main.innerHTML = pages[0];
+const main = document.querySelector(".main");
+const redirectButtons = document.querySelectorAll(".change-page");
+let currentActivePage;
 
-changePage.forEach((list, index) => {
-  list.addEventListener("click", () => {
-    main.innerHTML = pages[index];
+function changeActivePage(page) {
+  if (currentActivePage !== page) {
+    currentActivePage = page;
+    main.innerHTML = page;
+  }
+}
+
+changeActivePage(pages.homePage);
+
+redirectButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    changeActivePage(pages[this.id] ?? pages.notfoundPage);
   });
 });
